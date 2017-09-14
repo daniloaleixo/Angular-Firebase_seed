@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 // Material
 import { MdInputModule, MdButtonModule } from '@angular/material';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +16,6 @@ import { MdInputModule, MdButtonModule } from '@angular/material';
     MdInputModule,
     MdButtonModule
   ],
-  declarations: [LoginComponent]
+  declarations: [LoginComponent],
 })
 export class AuthModule { }

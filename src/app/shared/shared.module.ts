@@ -9,28 +9,35 @@ import {
 	MdToolbarModule,
 	MdIconModule,
 	MdInputModule,
-	MdButtonModule
+	MdButtonModule,
+  MdSnackBarModule
 } from '@angular/material';
 import { MaterializeModule } from 'angular2-materialize';
 
+// My services
 import {
 	ServerCommunicationService
 } from './services/server-communication.service';
-
 import {
 	FirebaseCommunicationService
 } from './services/firebase-communication.service';
 
+import { ToastService } from './services/toast.service'
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
+    MaterializeModule,
   	MdToolbarModule,
-  	RouterModule,
-  	MaterializeModule,
+    MdSnackBarModule,
   ],
   declarations: [HeaderComponent],
   exports: [HeaderComponent],
-  providers: [ServerCommunicationService, FirebaseCommunicationService]
+  providers: [
+    ServerCommunicationService,
+    FirebaseCommunicationService,
+    ToastService
+  ]
 })
 export class SharedModule { }
