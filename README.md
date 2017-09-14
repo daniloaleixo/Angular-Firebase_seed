@@ -11,6 +11,7 @@ The seed contains a sample Angular application which has to be linked with a val
 
 * Angular4
 * Firebase Server integration
+* Firebase Auth integration
 * Redux store
 * Angular Material
 * MaterializeCSS
