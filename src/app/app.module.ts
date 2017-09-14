@@ -10,7 +10,12 @@ import { appRoutes } from './app.routes';
 
 // REDUX
 import { StoreModule } from '@ngrx/store';
-import { authReducer } from './auth/auth.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import {
+  authReducer,
+  logout,
+  layoutReducer
+} from './shared/reducers/barrel-reducers';
 
 // FIREBASE
 import { AngularFireModule } from 'angularfire2';
@@ -22,7 +27,12 @@ import { environment } from '../environments/environment';
 // My Modules
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import { InitModule } from './init/init.module';
 import { TestModule } from './test/test.module';
+
+// My Services
+import { AuthService } from './auth/auth.service';
+import { InitAppService } from './shared/services/init-app.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -43,16 +53,28 @@ import { HomeComponent } from './home.component';
     AngularFireAuthModule,
     //REDUX
     StoreModule.forRoot({
-      auth: authReducer
+      auth: authReducer,
+      layout: layoutReducer
+    },
+    {
+      metaReducers: [logout]
+    }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25 //  Retains last 25 states
     }),
     BrowserModule,
     BrowserAnimationsModule,
     // My Modules
     SharedModule,
     AuthModule,
-    TestModule
+    InitModule,
+    TestModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    AuthService,
+    InitAppService
+  ]
 })
 
 export class AppModule {

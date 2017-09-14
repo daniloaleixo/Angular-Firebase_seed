@@ -5,37 +5,8 @@
 	  class="btn-floating btn-flat waves-effect waves-light transparent menu-icon">
 	    <i class="material-icons" style="margin-top: 5px">menu</i>
 	</a>
-	<span>My App</span>
+	<span>{{ headerText }}</span>
 </md-toolbar>
-
-
-
-<!-- <nav class="nav-extended" [style.background-color]="layout.getHeaderColor()">
-  <div class="nav-wrapper">
-    <a [routerLink]="['/']" class="brand-logo" 
-        style="left: 50%; transform: translateX(-50%)">
-        {{ layout.getHeaderText() }}
-    </a>
-    <a materialize="sideNav" [materializeParams]="[{ draggable: true, closeOnClick:true}]"
-      [materializeActions]="sidenavActions" data-activates="sidenav"
-      style="float: left; margin-right: 15px; transform: translateY(-10%)"
-      class="btn-floating btn-flat waves-effect waves-light transparent">
-        <i class="material-icons">menu</i>
-    </a>
-  </div>
-</nav> -->
-<!-- Tabs -->
-<!-- <span *ngIf="layout.getShowTabs()" md-tab-nav-bar 
-        style="background-color: rgba(0, 60, 107, 0.8)">
-  <a md-tab-link
-     *ngFor="let tab of tabsOptions"
-     [routerLink]="tab.link"
-     routerLinkActive #rla="routerLinkActive"
-     [active]="rla.isActive"
-     style="color: white;">
-    {{tab.description}}
-  </a>
-</span> -->
 
 <!-- Side menu -->
 <div id="sidenav" class="side-nav">
@@ -61,16 +32,20 @@
         </a>
       </div>
     </li>
-      <!-- <li *ngFor="let option of menuOptions">
-          <a [routerLink]="[option.link]">
-            <i class="material-icons">{{ option.icon }}</i>{{option.description}}
-          </a>
-      </li> -->
-      <li class="logout-button">
-      	<a routerLink="/login">
-      		<i class="material-icons">input</i>
-      		Logout
-      	</a>
-      </li>
+    <!-- Menu Options -->
+    <li>
+        <a [routerLink]="routes_constants.init.path">
+          <i class="material-icons">home</i>
+          Home
+        </a>
+    </li>
+
+    <!-- Logout -->
+    <li class="logout-button">
+    	<a (click)="logout()">
+    		<i class="material-icons">input</i>
+    		Logout
+    	</a>
+    </li>
   </ul>
 </div>
