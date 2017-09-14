@@ -1,7 +1,7 @@
 # A seed for Angular2 apps with Firebase server
 
 This project is an application skeleton for a typical Angular web app integrated with firebase database. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+to quickly bootstrap your angular webapp projects and dev environment for these projects. It's based mainly in angular-cli project integrated with Firebase and using angular material and Redux
 
 The seed contains a sample Angular application which has to be linked with a valid firebase database
 
@@ -55,6 +55,28 @@ ng serve
 
 Now browse to the app at `localhost:4200/`
 
+## Directory Layout
+
+```
+app/                    --> all of the source files for the application
+  auth/                 --> module which handles authentication and login page
+  init/                 --> init module
+  shared/               --> a lot of code the will be used across the app
+    actions/            --> redux store actions
+    components/         --> shared components
+    constants/          --> app constants
+    models/             --> all the models of the app
+    reducers/           --> redux store reducers
+    services/           --> all app services (can be separated in singletons and services)
+    stylesheets/        --> all app's stylesheets (which will use BEM structure)
+  test/                 --> test module
+  app.component.spec.ts --> unit test for app component
+  app.component.ts      --> app component which in the root of the app
+  app.module.ts         --> module
+  app.routes.ts         --> routes schema
+  app.store.ts          --> redux store definition
+  home.component.ts     --> home component handles all component within the app (which has the header)
+  
 
 ## Build
 
