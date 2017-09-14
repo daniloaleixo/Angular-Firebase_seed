@@ -9,10 +9,7 @@ import { LoginComponent } from './auth/login/login.component';
 
 import { TestComponent } from './test/test/test.component';
 import { InitComponent } from './init/init.component';
-import { TutorialComponent } from './tutorial/tutorial.component';
 
-import { ViewMissionsComponent } from './missions/view-missions/view-missions.component';
-import { MissionDetailsComponent } from './missions/mission-details/mission-details.component';
 
 
 export const appRoutes: Routes = [
@@ -24,21 +21,9 @@ export const appRoutes: Routes = [
 				component: InitComponent
 			},
 			{
-				path: 'tutorial',
-				component: TutorialComponent
-			},
-			{
 				path: 'test',
 				component: TestComponent
 			},
-			{
-				path: 'missions/view',
-				component: ViewMissionsComponent
-			},
-			{
-				path: 'missions/:idMission',
-				component: MissionDetailsComponent
-			}
 		],
 		component: HomeComponent
 	},

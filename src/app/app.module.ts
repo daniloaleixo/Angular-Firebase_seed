@@ -14,8 +14,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {
   authReducer,
   logout,
-  userReducer,
-  missionReducer,
   layoutReducer
 } from './shared/reducers/barrel-reducers';
 
@@ -31,8 +29,6 @@ import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
 import { InitModule } from './init/init.module';
 import { TestModule } from './test/test.module';
-import { TutorialModule } from './tutorial/tutorial.module';
-import { MissionsModule } from './missions/missions.module';
 
 // My Services
 import { AuthService } from './auth/auth.service';
@@ -58,8 +54,6 @@ import { HomeComponent } from './home.component';
     //REDUX
     StoreModule.forRoot({
       auth: authReducer,
-      missions: missionReducer,
-      user: userReducer,
       layout: layoutReducer
     },
     {
@@ -74,9 +68,7 @@ import { HomeComponent } from './home.component';
     SharedModule,
     AuthModule,
     InitModule,
-    TutorialModule,
     TestModule,
-    MissionsModule
   ],
   bootstrap: [AppComponent],
   providers: [

@@ -5,7 +5,6 @@ import {
 	IRequest,
 	IResponse,
 	ILoginRequest,
-  IAddMissionRequest
 } from '../models/communication.model';
 import { communication_constant } from '../constants/communication.constant';
 
@@ -39,12 +38,10 @@ export class ServerCommunicationService {
       case communication_constant.logout:
         return this.firebaseComm.logout();
 
-      // Get Missions
+      // Init System
       case communication_constant.init:
         return this.firebaseComm.init();
-      // Add Mission
-      case communication_constant.addMission:
-        return this.firebaseComm.addMission(<IAddMissionRequest>request);
+        
   		default:
   			// code...
   			break;

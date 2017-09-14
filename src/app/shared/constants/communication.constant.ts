@@ -4,6 +4,5 @@ export const communication_constant = {
 	register: 2,
 	loginGoogle: 3,
 	logout: 4,
-	init: 5,
-	addMission: 6
+	init: 5
 };
