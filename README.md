@@ -87,7 +87,7 @@ app/                    --> all of the source files for the application
   app.routes.ts         --> routes schema
   app.store.ts          --> redux store definition
   home.component.ts     --> home component handles all component within the app (which has the header)
-  
+```
 
 ## Build
 
