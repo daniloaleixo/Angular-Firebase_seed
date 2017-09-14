@@ -1,9 +1,19 @@
 # A seed for Angular2 apps with Firebase server
 
+## Introduction
+
 This project is an application skeleton for a typical Angular web app integrated with firebase database. You can use it
 to quickly bootstrap your angular webapp projects and dev environment for these projects. It's based mainly in angular-cli project integrated with Firebase and using angular material and Redux
 
 The seed contains a sample Angular application which has to be linked with a valid firebase database
+
+## Features included
+
+* Angular4
+* Firebase Server integration
+* Redux store
+* Angular Material
+* MaterializeCSS
 
 ## Getting Started
 
