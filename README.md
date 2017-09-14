@@ -11,7 +11,7 @@ To get you started you can simply clone the `AngularFirebase-seed` repository an
 
 ### Prerequisites
 
-You need git to clone the `AngularFirebase-seed` repository. You can get git from [here][git].
+You need git to clone the `AngularFirebase-seed` repository. You can get git from [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
